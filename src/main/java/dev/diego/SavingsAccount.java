@@ -1,7 +1,7 @@
 package dev.diego;
 
 public class SavingsAccount extends Account {
-    private boolean isActive;
+    protected boolean isActive;
 
     public SavingsAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
@@ -35,9 +35,12 @@ public class SavingsAccount extends Account {
         updateAccountStatus();
     }
 
-    @Override
-    public void printAccountDetails() {
-        super.printAccountDetails();
-        System.out.println("Account Active: " + isActive);
+    public float getBalance() {
+        return balance;
     }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
 }

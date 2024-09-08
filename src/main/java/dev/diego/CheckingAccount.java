@@ -43,4 +43,12 @@ public class CheckingAccount extends Account {
         super.printAccountDetails();
         System.out.println("Overdraft: " + overdraft);
     }
+
+    public float getBalance() {
+        return balance;
+    }
+
+    public float getOverdraft() {
+        return overdraft;
+    }
 }
